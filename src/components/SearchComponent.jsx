@@ -3,9 +3,13 @@ import {useParams,Link} from 'react-router-dom';
 import {retrieveRootsByIdApi} from './api/rootsApi.js'
 import {useNavigate } from 'react-router-dom';
 import './SearchComponent.scss';
+
 // import Root from './Root'
 
 export default function SearchComponent(){
+
+
+
     const [roots,setRoots] = useState([])
 
     const {values} = useParams()
@@ -62,7 +66,9 @@ export default function SearchComponent(){
                       
                 </ul>
             </div>
-            <button classNmae = "button1" onClick={() => navigate(-1)}>go back</button>
+            <div style={{textAlign:"center"}}>
+                <button class="button1"  onClick={() => navigate(-1)} ><span>Go Back </span></button>
+            </div>
         </div>
 
         

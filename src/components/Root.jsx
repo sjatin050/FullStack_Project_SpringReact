@@ -18,7 +18,7 @@ export default function Root(){
 
     return (
 
-      
+      <>
       <div className="m-5">
         <hr />
       <h1 className='text-center'> Customer Details </h1>
@@ -37,7 +37,7 @@ export default function Root(){
         <tr><th>Customer Id </th><td> {root.customerId}</td></tr>
         <tr><th>Product SubType </th><td> {root.productSubType}</td></tr>
         <tr><th>Lender Id </th><td> {root.lenderId}</td></tr>
-        <tr><th>Email </th><td> {root.email}</td><td><button className="btn btn-success" onClick={() => updateEmailUsingId(root._id)}>Update Email</button></td></tr>
+        <tr><th>Email </th><td> {root.email}</td><td><button className="btn btn-secondary" onClick={() => updateEmailUsingId(root._id)}>Update Email</button></td></tr>
         <tr><th>Mobile No </th><td> {root.mobile}</td></tr>
         <tr><th>PAN No</th><td> {root.pan}</td></tr>
         <tr><th>PAN Name </th><td>{root.panName}</td></tr>
@@ -141,7 +141,12 @@ export default function Root(){
 
 </div>
 
-<button classNmae = "button1" onClick={() => navigate(-1)}>go back</button>
+
       </div>
+      <div className="m-5" style={{textAlign:"center"}}>
+      <button class="button1" /*style={{display:"inline-block"}}*/ onClick={() => navigate(-1)} ><span>Go Back </span></button>
+      </div>
+      
+      </>
     );
 }

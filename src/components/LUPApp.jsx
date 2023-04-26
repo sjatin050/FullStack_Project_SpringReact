@@ -30,7 +30,7 @@ export default function LUPApp(){
                             <Route path='/welcome' element={ <IsAuthenticatedRoute> <WelcomeComponent /> </IsAuthenticatedRoute> } />
                             <Route path='/root' element={ <IsAuthenticatedRoute> <Root /> </IsAuthenticatedRoute>} />
                             <Route path='/search/:values' element={ <IsAuthenticatedRoute> <SearchComponent /> </IsAuthenticatedRoute>} />
-                            <Route path='/update/:_id' element={ <UpdateComponent /> } />
+                            <Route path='/update/:_id' element={ <IsAuthenticatedRoute> <UpdateComponent /> </IsAuthenticatedRoute> } />
 
                         </Routes>
                         {/* <FooterComponent/> */}
