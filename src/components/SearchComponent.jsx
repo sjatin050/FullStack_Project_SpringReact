@@ -3,6 +3,7 @@ import {useParams,Link} from 'react-router-dom';
 import {retrieveRootsByIdApi} from './api/rootsApi.js'
 import {useNavigate } from 'react-router-dom';
 import './SearchComponent.scss';
+// import {useAuth} from './AuthContext';
 
 // import Root from './Root'
 
@@ -16,11 +17,16 @@ export default function SearchComponent(){
 
     const navigate = useNavigate()
 
+    //const authContext = useAuth()
+    
+
     useEffect(
         () => refreshRoots(values)
     )
 
     function refreshRoots(values){
+      // console.log(authContext.username);
+      // console.log(authContext.email);
         retrieveRootsByIdApi(values)
             .then((response)=> setRoots(response.data) )
             .catch((error)=> console.log(error))

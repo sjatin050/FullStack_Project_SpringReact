@@ -66,6 +66,8 @@ export default function UpdateComponent(){
             .then(response => {
                 var para = "lead_id&" + _id;
                 navigate(`/search/${para}`)
+                // navigate(-1);
+                // window.location.reload(false); 
                 
             })
             .catch(error => console.log(error))

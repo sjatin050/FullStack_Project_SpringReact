@@ -11,7 +11,10 @@ export default function LoginComponent(){
     const auth = useAuth()
 
     async function onSubmit(values){
-        if(await auth.login(values.username,values.password)){
+        // if(await auth.login(values.username,values.password)){
+        //     navigate(`/welcome`)
+        // }
+        if(await auth.login(values.email,values.password)){
             navigate(`/welcome`)
         }
         else{
@@ -41,7 +44,8 @@ export default function LoginComponent(){
                           validate={validate}
                           validateOnChange={false}
                           validateOnBlur={false}
-                          initialValues={{username:"" , password:""}}
+                          //initialValues={{username:"" , password:""}}
+                          initialValues={{email:"" , password:""}}
                           enableReinitialize={true}
                     >
                     {

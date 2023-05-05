@@ -1,12 +1,17 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Root.css';
-
+// import {useAuth} from './AuthContext';
 
 export default function Root(){
     const location = useLocation()
     const {root} =  location.state
 
     const navigate = useNavigate()
+
+    // const authContext = useAuth()
+    // console.log(authContext.username);
+    // console.log(authContext.email);
+    // const username = authContext.username
 
     function updateEmailUsingId(_id) {
       console.log('clicked ' + _id)
@@ -21,15 +26,15 @@ export default function Root(){
       <>
       <div className="m-5">
         <hr />
-      <h1 className='text-center'> Customer Details </h1>
+      <h1 className='text-center' > Customer Details </h1>
       <div className="row">
         
         <hr />
 
-        <div className="column" style={{backgroundColor:'#aaa'}}>
-        <h2 className='text-center'>Basic Details</h2>
+        <div className="column" style={{backgroundColor:'#002E6E'}}>
+        <h2 className='text-center' style={{color:'white'}} >Basic Details</h2>
         </div>
-        <div className="column" style={{backgroundColor:'#ddd'}}>
+        <div className="column" style={{backgroundColor:'#00B9F1'}}>
         <br />
         
         <tr><th>Unique Id </th><td> {root._id}</td></tr>
@@ -48,10 +53,10 @@ export default function Root(){
       <hr />
       
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-        <h2 className="text-center">  Employment Details </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+        <h2 className="text-center" style={{color:'white'}}>  Employment Details </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}}>
+      <div className="column" style={{backgroundColor:'#00B9F1'}}>
       <br />
         <tr><th>Employment Type </th><td> {root.employmentDetails.employmentType}</td></tr>
         <tr><th>Monthly Income </th><td> {root.employmentDetails.monthlyIncome}</td></tr>
@@ -59,19 +64,19 @@ export default function Root(){
       <br />
       <hr />
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-        <h2 className="text-center">  Current Address </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+        <h2 className="text-center" style={{color:'white'}}>  Current Address </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
         <br />
         <tr><th>Pincode </th><td> {root.currentAddress.pincode}</td></tr>
       </div>
       <hr />
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-        <h2 className="text-center">  TNC Details </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+        <h2 className="text-center" style={{color:'white'}}>  TNC Details </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
       <br />
             <tr><th>Type </th><td> {root.tncDetails[0].type}</td></tr>
             <tr><th>Set Name </th><td> {root.tncDetails[0].setName}</td></tr>
@@ -81,10 +86,10 @@ export default function Root(){
       </div>
       <hr />
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-      <h2 className="text-center">  Offer </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+      <h2 className="text-center" style={{color:'white'}}>  Offer </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
       <br />
       <tr><th>Loan Amount </th><td> {root.offer.loanAmount}</td></tr>
         <tr><th>Disbursed Amount </th><td> {root.offer.disbursedAmount}</td></tr>
@@ -99,10 +104,10 @@ export default function Root(){
       </div>
       <hr />
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-      <h2 className="text-center">  White List Offer </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+      <h2 className="text-center" style={{color:'white'}}>  White List Offer </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
       <br />
       <tr><th>Base Id </th><td> {root.whitelistOffer.baseId}</td></tr>
         <tr><th>Offer Id </th><td> {root.whitelistOffer.offerId}</td></tr>
@@ -110,29 +115,29 @@ export default function Root(){
       <hr />
 
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-      <h2 className="text-center">  Lender Information </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+      <h2 className="text-center" style={{color:'white'}}>  Lender Information </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
       <br />
       <tr><th>Application Id </th><td> {root.lenderInformation.applicationId}</td></tr>
         <tr><th>Customer Id </th><td> {root.lenderInformation.customerId}</td></tr>
       </div>
       <hr />
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-      <h2 className="text-center">  Last Updated At </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+      <h2 className="text-center" style={{color:'white'}}>  Last Updated At </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
       <br />
       <tr><th>Date-NumberLong </th><td> {root.updatedAt.$date.$numberLong}</td></tr>
       </div>
       <hr />
 
-      <div className="column" style={{backgroundColor:'#aaa'}}>
-      <h2 className="text-center">  Class Name </h2>
+      <div className="column" style={{backgroundColor:'#002E6E'}}>
+      <h2 className="text-center" style={{color:'white'}}>  Class Name </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#ddd'}} >
+      <div className="column" style={{backgroundColor:'#00B9F1'}} >
       <br />
       <tr><th>Class </th><td> {root._class}</td></tr>
       </div>

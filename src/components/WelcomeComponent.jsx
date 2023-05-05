@@ -23,7 +23,7 @@ export default function WelcomeComponent(){
 
     function onSubmit(values){
         const strValues = values.idType + "&" + values.idNumber;
-        console.log(strValues)
+        //console.log(strValues)
         navigate(`/search/${strValues}`)
     }
 
