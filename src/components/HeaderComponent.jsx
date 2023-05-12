@@ -8,6 +8,8 @@ export default function HeaderComponent() {
 
     const isAuthenticated = authContext.isAuthenticated
 
+    const role = authContext.role
+
     function logout() {
          authContext.logout()
     }
@@ -31,6 +33,9 @@ export default function HeaderComponent() {
                             </ul>
                         </div>
                         <ul className="navbar-nav">
+                                <li className="nav-item fs-5">
+                                    {role==="ADMIN" && <Link className="nav-link" to="/register">Register</Link>}
+                                </li>
                                 <li className="nav-item fs-5">
                                     {!isAuthenticated && <Link className="nav-link" to="/login">Login</Link>}
                                 </li>

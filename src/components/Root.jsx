@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Root.css';
-// import {useAuth} from './AuthContext';
+import {useAuth} from './AuthContext';
 
 export default function Root(){
     const location = useLocation()
@@ -8,7 +8,8 @@ export default function Root(){
 
     const navigate = useNavigate()
 
-    // const authContext = useAuth()
+    const authContext = useAuth()
+    const role = authContext.role
     // console.log(authContext.username);
     // console.log(authContext.email);
     // const username = authContext.username
@@ -42,7 +43,7 @@ export default function Root(){
         <tr><th>Customer Id </th><td> {root.customerId}</td></tr>
         <tr><th>Product SubType </th><td> {root.productSubType}</td></tr>
         <tr><th>Lender Id </th><td> {root.lenderId}</td></tr>
-        <tr><th>Email </th><td> {root.email}</td><td><button className="btn btn-secondary" onClick={() => updateEmailUsingId(root._id)}>Update Email</button></td></tr>
+        <tr><th>Email </th><td> {root.email}</td><td>{ role === 'ADMIN' && <button className="btn btn-secondary" onClick={() => updateEmailUsingId(root._id)}>Update Email</button>}</td></tr>
         <tr><th>Mobile No </th><td> {root.mobile}</td></tr>
         <tr><th>PAN No</th><td> {root.pan}</td></tr>
         <tr><th>PAN Name </th><td>{root.panName}</td></tr>

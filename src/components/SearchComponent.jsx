@@ -21,7 +21,7 @@ export default function SearchComponent(){
     
 
     useEffect(
-        () => refreshRoots(values)
+        () => refreshRoots(values),[values]
     )
 
     function refreshRoots(values){

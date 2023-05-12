@@ -13,24 +13,30 @@ export default function AuthProvider({ children }) {
     //const [username, setUsername] = useState(null)
     const [email, setEmail] = useState(null)
     const [token, setToken] = useState(null)
+    const [role,setRole] = useState(null)
 
     async function login(email, password) {
     //async function login(username, password) {
         try{
-            const response = await executeJwtAuthenticationService(email,password)
+            const response = (await executeJwtAuthenticationService(email,password))
+            console.log(response);
             //const response = await executeJwtAuthenticationService(username,password)
             if(response.status===200){
-                const jwtToken = 'Bearer '+ response.data.token
+                const val=response.data.authenticationResponse.access_token
+                
+                const jwtToken = 'Bearer '+ val
                 
                 console.log("JWT Tokens")
                 setToken(jwtToken)
                 setAuthenticated(true)
+                setRole(response.data.role)
                 //setUsername(username)
                 setEmail(email)
 
                 apiClient.interceptors.request.use(
                     (config) => {
-                        console.log(jwtToken)
+                        
+                        console.log(response)
                         console.log("token added to all urls")
                         config.headers.Authorization = jwtToken
                         return config
@@ -53,11 +59,13 @@ export default function AuthProvider({ children }) {
         setEmail(null)
         setAuthenticated(false)
         setToken(null)
+        setRole(null)
+        localStorage.removeItem('')
     }
 
     return (
         //<AuthContext.Provider value={ {isAuthenticated, username, token,login,logout}  }>
-        <AuthContext.Provider value={ {isAuthenticated, email, token,login,logout}  }>
+        <AuthContext.Provider value={ {isAuthenticated, email, token,login,logout,role}  }>
             {children}
         </AuthContext.Provider>
     )
