@@ -36,7 +36,7 @@ export default function SearchComponent(){
     return (
       <>
          <div className="SearchComponent container">
-            <h2 className="m-5 text-center"> Your Results appear here</h2>
+            <h1 className="m-5 text-center"> Your Results appear here</h1>
             <div className="">
                 <ul className="responsive-table">
                        <li className="table-header">
@@ -45,6 +45,7 @@ export default function SearchComponent(){
                                 <div class="col col-2"> Customer Id </div>
                                 <div class="col col-3"> Product Type</div>
                                 <div class="col col-4"> Email </div>
+                                <div class="col col-3"> See More Details</div>
                             
                        </li>
 
@@ -54,17 +55,18 @@ export default function SearchComponent(){
                                     root => (
                                     <li className="table-row" key={root._id}>
 
-                                                <div class="col col-1">
-                                                  <Link to='/root'
-                                                        state = {{root}}
-                                                  >
-                                                    {root._id}
-                                                  </Link>
-                                                </div>
+                                                <div class="col col-1">{root._id}</div>
 
                                                 <div class="col col-2"> {root.customerId}</div>
                                                 <div class="col col-3"> {root.productType}  </div>
                                                 <div class="col col-4"> {root.email}  </div>
+                                    
+                                                <div class="col col-3 button3">  <Link to='/root'
+                                                        state = {{root}}
+                                                  >
+                                                    <button >click here</button>  
+                                                  </Link></div>
+                                                
                                         </li>
                                     )
                                 )

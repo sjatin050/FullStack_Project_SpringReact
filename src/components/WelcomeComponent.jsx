@@ -1,10 +1,11 @@
 //import {useState} from 'react';
 import {Formik,Form,Field,ErrorMessage} from 'formik';
 import {useNavigate} from 'react-router-dom';
+import './loginRegister.css';
 
 export default function WelcomeComponent(){
 
-    //const [roots,setRoots] = useState([])
+    
 
     const initialValues = {
         idNumber:"",
@@ -42,11 +43,11 @@ export default function WelcomeComponent(){
             <div className="row justify-content-center">
               <div className="col-md-6">
                 <div>
-                    <h2 className="m-5 text-center "> Welcome & search  </h2>
+                    <h1 className="m-5 text-center "> Search Panel  </h1>
                 </div>
                 <Formik   initialValues={initialValues}
                           onSubmit={onSubmit}
-                          validate={validate}
+                          validate={validate}s
                           validateOnChange={false}
                           validateOnBlur={false}
                           enableReinitialize={true}

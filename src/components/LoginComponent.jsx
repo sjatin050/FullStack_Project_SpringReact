@@ -1,7 +1,8 @@
-import {useState} from 'react';
+import { useState} from 'react';
 import {Formik,Form,Field,ErrorMessage} from 'formik';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Navigate} from 'react-router-dom';
 import {useAuth} from './AuthContext';
+import './loginRegister.css';
 
 export default function LoginComponent(){
 
@@ -10,10 +11,18 @@ export default function LoginComponent(){
 
     const auth = useAuth()
 
+
+     //useEffect((auth) => {
+
+            if(auth.isAuthenticated)
+            return <Navigate to="/welcome" />
+        //}, [auth]);
+ 
+
+    
+
     async function onSubmit(values){
-        // if(await auth.login(values.username,values.password)){
-        //     navigate(`/welcome`)
-        // }
+       
         if(await auth.login(values.email,values.password)){
             navigate(`/welcome`)
         }
@@ -27,6 +36,10 @@ export default function LoginComponent(){
         if(!values.email || !values.email.endsWith("@paytm.com")){
             errors.email = "Enter a Valid Paytm Email Id"
         }
+        else if(!values.password){
+            errors.password = "Please Enter your password"
+        }
+
         return errors;
     }
 
@@ -37,7 +50,7 @@ export default function LoginComponent(){
               <div className="col-md-6">
 
                 <div>
-                    <h1 className="m-5 text-center"> LUP Admin Panel  </h1>
+                    <b><h1 className="m-5 text-center"> LUP Admin Panel  </h1></b>
                 </div>
 
                 <Formik   onSubmit={onSubmit}
@@ -52,20 +65,18 @@ export default function LoginComponent(){
                         (props) => (
                             <Form className="row justify-content-center m-5">
 
-                                {/* <fieldSet className="form-group m-3">
-                                    <label> Username </label>
-                                    <Field type="text" className="form-control" name="username" placeholder="Enter Your Username"/>
-                                </fieldSet> */}
+                                
 
                                 <fieldSet className="form-group m-3">
                                     <label> Email Id </label>
                                     <Field type="email" className="form-control" name="email" placeholder="Enter Your Paytm Email Id"/>
-                                    <ErrorMessage name="email" className="text-danger" />
+                                    <ErrorMessage name="email" component="div" className = "alert alert-danger" />
                                 </fieldSet>
 
                                 <fieldSet className="form-group m-3">
                                     <label> Password </label>
                                     <Field type="password" className="form-control" name="password" placeholder="Enter Your Password"/>
+                                    <ErrorMessage name="password" component="div" className = "alert alert-danger" />
                                 </fieldSet>
 
                                 {showErrorMessage && <div className="errorMessage text-center text-danger">

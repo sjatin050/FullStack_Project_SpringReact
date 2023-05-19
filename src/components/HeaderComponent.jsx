@@ -1,10 +1,17 @@
 
 import { Link } from "react-router-dom"
 import { useAuth } from "./AuthContext"
+//import { useParams } from "react-router-dom"
 
 export default function HeaderComponent() {
 
     const authContext = useAuth()
+    console.log("link part")
+    const nameUrl = window.location.href
+    
+    // const {register}= useParams()
+    console.log(nameUrl);
+    console.log(nameUrl.endsWith("register"));
 
     const isAuthenticated = authContext.isAuthenticated
 
@@ -15,7 +22,7 @@ export default function HeaderComponent() {
     }
 
     console.log(authContext)
-    console.log(authContext.number);
+    //console.log(authContext.number);
 
     return (
         <header className="border-bottom border-light border-5 mb-5 p-2">
@@ -34,10 +41,10 @@ export default function HeaderComponent() {
                         </div>
                         <ul className="navbar-nav">
                                 <li className="nav-item fs-5">
-                                    {role==="ADMIN" && <Link className="nav-link" to="/register">Register</Link>}
+                                    {role==="ADMIN" && isAuthenticated && !nameUrl.endsWith("register") && <Link className="nav-link" to="/register">Register</Link>}
                                 </li>
                                 <li className="nav-item fs-5">
-                                    {!isAuthenticated && <Link className="nav-link" to="/login">Login</Link>}
+                                    {!isAuthenticated && !nameUrl.endsWith("login") && !nameUrl.endsWith("/") && <Link className="nav-link" to="/login">Login</Link>}
                                 </li>
                                 <li className="nav-item fs-5">
                                     {isAuthenticated && <Link className="nav-link" to="/login" onClick={logout}>Logout</Link>}

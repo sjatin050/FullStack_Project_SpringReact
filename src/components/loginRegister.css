@@ -1,0 +1,25 @@
+.errorMessage1
+{
+
+} 
+
+.text-center1{
+    text-align: center;
+} 
+
+.text-danger1{
+    color: red;
+}
+
+label{
+    font-size: 25px;
+    /* color : #002E6E; */
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    color : #002E6E;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+}

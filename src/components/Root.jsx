@@ -1,11 +1,24 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+//import {useState , useEffect} from "react";
+import { useLocation, useNavigate} from 'react-router-dom';
 import './Root.css';
 import {useAuth} from './AuthContext';
 
 export default function Root(){
     const location = useLocation()
-    const {root} =  location.state
+    var {root} =  location.state
+    console.log(root)
 
+    // const [roots, setRoots] = useState(null)
+    // setRoots(root)
+    // console.log(roots)
+
+    if(root===null){
+      root=localStorage.getItem('root');
+    }
+
+    localStorage.setItem('root', root);
+
+    
     const navigate = useNavigate()
 
     const authContext = useAuth()
@@ -14,8 +27,23 @@ export default function Root(){
     // console.log(authContext.email);
     // const username = authContext.username
 
+    // useEffect(() => {
+    //   // Check if there is a saved authentication state in localStorage
+    //   const savedRoot = localStorage.getItem('root');
+    //   //console.log(savedRoot)
+    //   console.log(savedRoot)
+  
+    //   if (savedRoot) {
+    //     if(authContext.isAuthenticated)
+    //     return <Navigate to="/root" />
+    //   }
+    // }, []);
+
+    
+
     function updateEmailUsingId(_id) {
       console.log('clicked ' + _id)
+      localStorage.removeItem('root');
       navigate(`/update/${_id}`)
     
     }

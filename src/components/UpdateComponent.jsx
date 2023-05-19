@@ -1,33 +1,20 @@
 import { useEffect, useState } from 'react'
 import {useNavigate, useParams} from 'react-router-dom'
 import { updateEmailApi ,retrieveRootById} from './api/rootsApi'
-// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { useAuth } from './security/AuthContext'
 import {Formik, Form, Field, ErrorMessage} from 'formik'
-// import moment from 'moment'
+
 
 export default function UpdateComponent(){
 
     const {_id} = useParams()
     console.log(_id)
-    // const[description, setDescription] = useState('')
-
-    // const[targetDate, setTargetDate] = useState('')
 
     const[email, setEmail] = useState('')
 
-    // const authContext = useAuth()
-    // const username = authContext.username
-
     const navigate = useNavigate();
 
-    // const showToastMessage = () => {
-    //     toast.success('Success Notification !', {
-    //         position: toast.POSITION.TOP_RIGHT
-    //     });
-    // };
-    
+   
     // this is used to call function to render effect
     useEffect(
         () => retrieveEmail(_id)
@@ -51,23 +38,13 @@ export default function UpdateComponent(){
     }
     // function is used to update a todo element
     function onSubmit(values) {
-        console.log("mera bhai "+ values.email)
-        // const todo = {
-        //     id: id,
-        //     username: username,
-        //     description: values.description,
-        //     targetDate: values.targetDate,
-        //     done: false
-        // }
-        // console.log(todo)
-
-      
+        console.log("priting internal values "+ values.email)
+       
             updateEmailApi(_id,values.email)
             .then(response => {
                 var para = "lead_id&" + _id;
                 navigate(`/search/${para}`)
-                // navigate(-1);
-                // window.location.reload(false); 
+               
                 
             })
             .catch(error => console.log(error))
@@ -112,8 +89,8 @@ export default function UpdateComponent(){
                     </fieldset>
                             
                     <div style={{textAlign:"center"}}>
-                        <button className="btn btn-secondary m-5" /*onClick={showToastMessage}*/ type="submit">Save</button>
-                        {/* <ToastContainer /> */}
+                        <button className="btn btn-secondary m-5"  type="submit">Save</button>
+                        
                     </div>
                     </Form>
                     
