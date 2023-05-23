@@ -73,6 +73,8 @@ All details of the customer are diplayed on this page .
 
 If want to search Other customer , hit "Home" on top and if the work is Done , hit "LogOut" on Top right.
 
+## To start the project of Local server , Follow the Below Commands
+
 ### `npm start`
 
 Runs the app in the development mode.\
