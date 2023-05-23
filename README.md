@@ -9,7 +9,38 @@ This is a Full Stack Project , I used Spring Boot for Backend and React.js for F
 ## Demonstrating The Site flow
 
 ### When a ADMIN logs into the Site 
+
+#### Enter the Details of the ADMIN
 ![Login page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/4a6692fa-0ec6-4809-8565-94f6961e5ce0)
+
+#### After Logging in you are directed to Search Panel 
+if Credentials are wrong then Autentication Failed Error is Displayed
+![Search Panel](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/72748f84-e29c-470c-869b-b2085f0cd1c4)
+In this pannel there are 4 choices , select one of them and also input the corresponding ID into it.
+
+#### Result Page is displayed after Search Panel
+Corresponding to the details in Search Panel , Customers Details are displayed.
+![Results Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/7e783b13-d42c-49ed-a25d-b868e0a1b089)
+There is "Click here" button , choose the customer you want to see the details.
+
+#### Customer Details page is displayed after Results Page
+All details of the customer are diplayed on this page .
+![Customer Details page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/28acc512-881e-4348-a008-e96f4a46ec93)
+As the User is ADMIN , then he can edit the details , There is a "Update Email" button .
+
+#### Update Email page is displayed if UPDATE EMAIL button is pressed
+After hitting the "update email" button on Customer details page , Update page is Opened.
+![Update page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/b80ffd65-8582-42dd-9c86-af9ea65318bb)
+After Updating the email , hit the "SAVE" button , 
+
+#### After Hitting SAVE button , Results Page is displayed 
+When you hit "Save" button , result page is displayed with only that customer , with its updated Email Id .
+![After Update Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/3cd042ff-b18d-4685-96e4-b851bc030a6b)
+To register new Member Hit the Register Button on top right Corner.
+
+#### ADMIN can register a new member 
+Admin has the priviledge to register new member , and can also provide him Role of Either ADMIN or USER.
+![Register Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/4401223b-7977-445d-a4fc-83be5a5ebe09)
 
 
 ### `npm start`
