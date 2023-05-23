@@ -10,8 +10,8 @@ export default function HeaderComponent() {
     const nameUrl = window.location.href
     
     // const {register}= useParams()
-    console.log(nameUrl);
-    console.log(nameUrl.endsWith("register"));
+    //console.log(nameUrl);
+    //console.log(nameUrl.endsWith("register"));
 
     const isAuthenticated = authContext.isAuthenticated
 
@@ -21,7 +21,7 @@ export default function HeaderComponent() {
          authContext.logout()
     }
 
-    console.log(authContext)
+    //console.log(authContext)
     //console.log(authContext.number);
 
     return (
@@ -29,7 +29,7 @@ export default function HeaderComponent() {
             <div className="container">
                 <div className="row">
                     <nav className="navbar navbar-expand-lg">
-                        <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="https://paytm.com/"> <mark className="darkBlue">Pay<mark className="lightBlue">tm</mark></mark> </a>
+                        <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="https://paytm.com/"> <mark className="darkBlue">Jatin<mark className="lightBlue">Singh</mark></mark> </a>
                         <div className="collapse navbar-collapse">
                             <ul className="navbar-nav">
                                 <li className="nav-item fs-5">

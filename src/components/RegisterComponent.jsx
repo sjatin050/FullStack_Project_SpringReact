@@ -14,7 +14,7 @@ export default function RegisterComponent(){
         executeJwtRegisterService(values.firstName,values.lastName,values.email,values.password,values.role)
         .then((response) => {
             
-            console.log(response)
+            //console.log(response)
             if(response.data.register === false){
                 
                 navigate(`/login`)
@@ -42,7 +42,7 @@ export default function RegisterComponent(){
         else if(!values.role || !(values.role==="ADMIN" || values.role==="USER")){
             errors.role = "The role should be either ADMIN or USER"
         }
-        else if(!values.email || !(values.email.endsWith("@paytm.com") || values.email.endsWith("@ocltp.com") || values.email.endsWith("@paytmbank.com") || values.email.endsWith("@paytmpayment.com"))){
+        else if(!values.email || !(values.email.endsWith("@gmail.com") || values.email.endsWith("@yahoo.com") || values.email.endsWith("@hotmail.com") || values.email.endsWith("@jatin.com"))){
             errors.email = "Enter a Valid Paytm Email Id"
         }
         else if(!strongRegex.test(values.password) ){

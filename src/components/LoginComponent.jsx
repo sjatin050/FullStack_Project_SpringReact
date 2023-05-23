@@ -50,7 +50,7 @@ export default function LoginComponent(){
               <div className="col-md-6">
 
                 <div>
-                    <b><h1 className="m-5 text-center"> LUP Admin Panel  </h1></b>
+                    <b><h1 className="m-5 text-center"> Admin USER Panel  </h1></b>
                 </div>
 
                 <Formik   onSubmit={onSubmit}

@@ -6,7 +6,7 @@ import {useAuth} from './AuthContext';
 export default function Root(){
     const location = useLocation()
     var {root} =  location.state
-    console.log(root)
+    //console.log(root)
 
     // const [roots, setRoots] = useState(null)
     // setRoots(root)
@@ -42,7 +42,7 @@ export default function Root(){
     
 
     function updateEmailUsingId(_id) {
-      console.log('clicked ' + _id)
+      //console.log('clicked ' + _id)
       localStorage.removeItem('root');
       navigate(`/update/${_id}`)
     
@@ -101,19 +101,7 @@ export default function Root(){
         <tr><th>Pincode </th><td> {root.currentAddress.pincode}</td></tr>
       </div>
       <hr />
-
-      <div className="column" style={{backgroundColor:'#002E6E'}}>
-        <h2 className="text-center" style={{color:'white'}}>  TNC Details </h2>
-      </div>
-      <div className="column" style={{backgroundColor:'#00B9F1'}} >
-      <br />
-            <tr><th>Type </th><td> {root.tncDetails[0].type}</td></tr>
-            <tr><th>Set Name </th><td> {root.tncDetails[0].setName}</td></tr>
-            <tr><th>Version </th><td> {root.tncDetails[0].version}</td></tr>
-            <tr><th>IsAccepted </th><td> {root.tncDetails[0].isAccepted.toString()}</td></tr>
-            <tr><th>Accepted Time </th><td>{root.tncDetails[0].acceptedTime}</td></tr>
-      </div>
-      <hr />
+ 
 
       <div className="column" style={{backgroundColor:'#002E6E'}}>
       <h2 className="text-center" style={{color:'white'}}>  Offer </h2>
@@ -122,14 +110,7 @@ export default function Root(){
       <br />
       <tr><th>Loan Amount </th><td> {root.offer.loanAmount}</td></tr>
         <tr><th>Disbursed Amount </th><td> {root.offer.disbursedAmount}</td></tr>
-        <tr><th>ROI </th><td> {root.offer.roi}</td></tr>
-        <tr><th>ROI Unit </th><td>{root.offer.roiUnit}</td></tr>
-        <tr><th>Processing Fee Rate </th><td> {root.offer.processingFeeRate}</td></tr>
-        <tr><th>Tenure </th><td> {root.offer.tenure}</td></tr>
-        <tr><th>Tenure Unit </th><td> {root.offer.tenureUnit}</td></tr>
-        <tr><th>Repayment Amount </th><td> {root.offer.repaymentAmount}</td></tr>
-        <tr><th>Installment Amount </th><td> {root.offer.installmentAmount}</td></tr>
-        <tr><th>Installment Frequency </th><td> {root.offer.installmentFrequency}</td></tr>
+      
       </div>
       <hr />
 
@@ -166,10 +147,7 @@ export default function Root(){
       <div className="column" style={{backgroundColor:'#002E6E'}}>
       <h2 className="text-center" style={{color:'white'}}>  Class Name </h2>
       </div>
-      <div className="column" style={{backgroundColor:'#00B9F1'}} >
-      <br />
-      <tr><th>Class </th><td> {root._class}</td></tr>
-      </div>
+     
       <hr />
 
 
