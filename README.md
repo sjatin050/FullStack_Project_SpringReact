@@ -12,7 +12,7 @@ This is a Full Stack Project , Used Spring Boot for Backend and React.js for Fro
 </br>
 --> A user has Either of the 2 access i.e. ADMIN or USER .
 </br>
-  --> A ADMIN can regitser new user and can edit details of customer whereas a ADMIN can only see details of Customer.
+  --> A ADMIN can regitser new user and can edit details of customer whereas a USER can only see details of Customer.
 
 ## Demonstrating The Site flow
 
