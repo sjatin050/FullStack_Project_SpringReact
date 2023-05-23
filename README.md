@@ -86,7 +86,8 @@ If want to search Other customer , hit "Home" on top and if the work is Done , h
 
 </br>
 </br>
-## To start the project of Local server , Follow the Below Commands
+
+## To start the project in Local server , Follow the Below Commands
 
 ### `npm start`
 
