@@ -42,6 +42,28 @@ To register new Member Hit the Register Button on top right Corner.
 Admin has the priviledge to register new member , and can also provide him Role of Either ADMIN or USER.
 ![Register Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/4401223b-7977-445d-a4fc-83be5a5ebe09)
 
+### When a USER logs into the Site 
+
+#### Enter the Details of the USER
+if Credentials are wrong then Autentication Failed Error is Displayed
+![Login page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/dbd05870-1a54-45a8-918b-a542672ea7c5)
+If Credentials are correct , it is directed to Search Panel
+
+#### After Logging in you are directed to Search Panel 
+![Customer Search page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/15ad9d52-e6b2-4017-b880-35d7baa5a842)
+
+In this pannel there are 4 choices , select one of them and also input the corresponding ID into it.
+
+#### Result Page is displayed after Search Panel
+Corresponding to the details in Search Panel , Customers Details are displayed.
+![Customer results page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/564df45b-cbab-4254-a18b-9d81fb6755cc)
+There is "Click here" button , choose the customer you want to see the details.
+
+#### Customer Details page is displayed after Results Page
+All details of the customer are diplayed on this page .
+![customer details display page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/0cbef4e3-8578-4a24-9bc0-8c5eed4c6c84)
+
+If want to search Other customer , hit "Home" on top and if the work is Done , hit "LogOut" on Top right.
 
 ### `npm start`
 
