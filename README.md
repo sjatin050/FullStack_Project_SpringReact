@@ -6,10 +6,13 @@ This project repository only contains the react code , the backend code is here 
 
 This is a Full Stack Project , Used Spring Boot for Backend and React.js for Frontend , and used 2 types of Databases to dispaly the data.
 </br>
-Used MySql Database for storing Details of client which is Accessing the site .
-Used MongoDb for storing details of customers which is accessed by Client . 
-A user has Either of the 2 access i.e. ADMIN or USER .
- -> A ADMIN can regitser new user and can edit details of customer whereas a ADMIN can only see details of Customer.
+--> Used MySql Database for storing Details of client which is Accessing the site .
+</br>
+--> Used MongoDb for storing details of customers which is accessed by Client . 
+</br>
+--> A user has Either of the 2 access i.e. ADMIN or USER .
+</br>
+  --> A ADMIN can regitser new user and can edit details of customer whereas a ADMIN can only see details of Customer.
 
 ## Demonstrating The Site flow
 
