@@ -17,7 +17,7 @@ export default function SearchComponent(){
 
     const navigate = useNavigate()
 
-    //const authContext = useAuth()
+    const [showErrorMessage,setShowErrorMessage] = useState(false)
     
 
     useEffect(
@@ -28,8 +28,18 @@ export default function SearchComponent(){
       // console.log(authContext.username);
       // console.log(authContext.email);
         retrieveRootsByIdApi(values)
-            .then((response)=> setRoots(response.data) )
+            .then((response)=> {
+              setRoots(response.data);
+              //console.log(response)
+              //console.log("bahar hu");
+              if(response.data.length===0){
+                //console.log("khali hai");
+                setShowErrorMessage(true)
+            }
+             
+            })
             .catch((error)=> console.log(error))
+
     }
     
 
@@ -49,6 +59,10 @@ export default function SearchComponent(){
                             
                        </li>
 
+                       {showErrorMessage && <div className="errorMessage text-center text-danger">
+                                                    <span>Sorry , No customers to display with particular details , Try other Details</span>
+                                                    </div>
+                                }
                       
                             {
                               roots.map(
