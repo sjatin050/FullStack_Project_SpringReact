@@ -19,7 +19,7 @@ This is a Full Stack Project , Used Spring Boot for Backend and React.js for Fro
 ### I. When a ADMIN logs into the Site 
 
 #### 1. Enter the Details of the ADMIN
-![Login page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/4a6692fa-0ec6-4809-8565-94f6961e5ce0)
+![Login page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/admin/login%20page.png)
 </br>
 
 #### 2. After Logging in you are directed to Search Panel 
