@@ -8,6 +8,7 @@ import HeaderComponent from './HeaderComponent';
 import RegisterComponent from './RegisterComponent';
 import FooterComponent from './FooterComponent';
 import ErrorComponent from './ErrorComponent';
+import ChangePasswordComponent from './ChangePasswordComponent';
 import Root from './Root'
 import AuthProvider,{useAuth} from './AuthContext';
 
@@ -116,6 +117,7 @@ export default function LUPApp(){
                             <Route path='/root' element={ <IsAuthenticatedRoute> <Root /> </IsAuthenticatedRoute>} />
                             <Route path='/search/:values' element={ <IsAuthenticatedRoute> <SearchComponent /> </IsAuthenticatedRoute>} />
                             <Route path='/update/:_id' element={ <IsAuthenticatedRoute> <UpdateComponent /> </IsAuthenticatedRoute> } />
+                            <Route path='/changePassword' element={ <IsAuthenticatedRoute> <ChangePasswordComponent /> </IsAuthenticatedRoute> } />
                             <Route path='*' element={<ErrorComponent/>}></Route>
 
                         </Routes>
