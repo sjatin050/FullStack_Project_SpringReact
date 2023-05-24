@@ -85,6 +85,18 @@ All details of the customer are diplayed on this page .
 If want to search Other customer , hit "Home" on top and if the work is Done , hit "LogOut" on Top right.
 
 </br>
+
+### III. Changing Client password by self
+
+#### 1. Change password page
+after hitting the "change_password" on the upper right hand side , we are redirected to change password page
+![change password page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/password/password%20change%20page.png)
+
+#### 2. Change password confirmation
+after hitting the "save" button , we are redirected to search panel.
+![change password confirmation](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/password/change%20confirmation.png)
+
+</br>
 </br>
 
 ## To start the project in Local server , Follow the Below Commands
