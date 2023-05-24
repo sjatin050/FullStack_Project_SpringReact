@@ -62,25 +62,25 @@ Admin has the priviledge to register new member , and can also provide him Role 
 
 #### 1. Enter the Details of the USER
 if Credentials are wrong then Autentication Failed Error is Displayed
-![Login page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/dbd05870-1a54-45a8-918b-a542672ea7c5)
+![Login page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/user/login%20page.png)
 If Credentials are correct , it is directed to Search Panel
 </br>
 
 #### 2. After Logging in you are directed to Search Panel 
-![Customer Search page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/15ad9d52-e6b2-4017-b880-35d7baa5a842)
+![Customer Search page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/user/search%20panel.png)
 
 In this pannel there are 4 choices , select one of them and also input the corresponding ID into it.
 </br>
 
 #### 3. Result Page is displayed after Search Panel
 Corresponding to the details in Search Panel , Customers Details are displayed.
-![Customer results page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/564df45b-cbab-4254-a18b-9d81fb6755cc)
+![Customer results page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/user/All%20customers.png)
 There is "Click here" button , choose the customer you want to see the details.
 </br>
 
 #### 4. Customer Details page is displayed after Results Page
 All details of the customer are diplayed on this page .
-![customer details display page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/0cbef4e3-8578-4a24-9bc0-8c5eed4c6c84)
+![customer details display page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/user/customer%20details.png)
 
 If want to search Other customer , hit "Home" on top and if the work is Done , hit "LogOut" on Top right.
 
