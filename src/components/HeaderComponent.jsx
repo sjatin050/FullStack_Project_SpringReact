@@ -29,7 +29,7 @@ export default function HeaderComponent() {
             <div className="container">
                 <div className="row">
                     <nav className="navbar navbar-expand-lg">
-                        <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="https://paytm.com/"> <mark className="darkBlue">Jatin<mark className="lightBlue">Singh</mark></mark> </a>
+                        <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="https://paytm.com/"> <mark className="darkBlue">Pay<mark className="lightBlue">tm</mark></mark> </a>
                         <div className="collapse navbar-collapse">
                             <ul className="navbar-nav">
                                 <li className="nav-item fs-5">
@@ -40,6 +40,9 @@ export default function HeaderComponent() {
                             </ul>
                         </div>
                         <ul className="navbar-nav">
+                                <li className="nav-item fs-5">
+                                    {isAuthenticated && !nameUrl.endsWith("changePassword") && <Link className="nav-link" to="/changePassword">Change_Password</Link>}
+                                </li>
                                 <li className="nav-item fs-5">
                                     {role==="ADMIN" && isAuthenticated && !nameUrl.endsWith("register") && <Link className="nav-link" to="/register">Register</Link>}
                                 </li>
