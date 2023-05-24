@@ -19,42 +19,42 @@ This is a Full Stack Project , Used Spring Boot for Backend and React.js for Fro
 ### I. When a ADMIN logs into the Site 
 
 #### 1. Enter the Details of the ADMIN
-![Login page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/admin/login%20page.png)
+![Login page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/login%20page.png)
 </br>
 
 #### 2. After Logging in you are directed to Search Panel 
 if Credentials are wrong then Autentication Failed Error is Displayed
-![Search Panel](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/72748f84-e29c-470c-869b-b2085f0cd1c4)
+![Search Panel](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/search%20panel.png)
 In this pannel there are 4 choices , select one of them and also input the corresponding ID into it.
 </br>
 
 #### 3. Result Page is displayed after Search Panel
 Corresponding to the details in Search Panel , Customers Details are displayed.
-![Results Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/7e783b13-d42c-49ed-a25d-b868e0a1b089)
+![Results Page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/all%20customers%20.png)
 There is "Click here" button , choose the customer you want to see the details.
 </br>
 
 #### 4. Customer Details page is displayed after Results Page
 All details of the customer are diplayed on this page .
-![Customer Details page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/28acc512-881e-4348-a008-e96f4a46ec93)
+![Customer Details page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/customer%20details.png)
 As the User is ADMIN , then he can edit the details , There is a "Update Email" button .
 </br>
 
 #### 5. Update Email page is displayed if UPDATE EMAIL button is pressed
 After hitting the "update email" button on Customer details page , Update page is Opened.
-![Update page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/b80ffd65-8582-42dd-9c86-af9ea65318bb)
+![Update page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/update%20page.png)
 After Updating the email , hit the "SAVE" button , 
 </br>
 
 #### 6. After Hitting SAVE button , Results Page is displayed 
 When you hit "Save" button , result page is displayed with only that customer , with its updated Email Id .
-![After Update Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/3cd042ff-b18d-4685-96e4-b851bc030a6b)
+![After Update Page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/after%20update.png)
 To register new Member Hit the Register Button on top right Corner.
 </br>
 
 #### 7. ADMIN can register a new member 
 Admin has the priviledge to register new member , and can also provide him Role of Either ADMIN or USER.
-![Register Page](https://github.com/jatinpaytm/FullStack_Project_SpringReact/assets/123053672/4401223b-7977-445d-a4fc-83be5a5ebe09)
+![Register Page](https://github.com/sjatin050/FullStack_Project_SpringReact/blob/master/public/screenshots/admin/register%20page.png)
 </br>
 </br>
 
